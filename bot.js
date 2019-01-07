@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+var prefix = '!'
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -40,7 +40,7 @@ client.on('ready', () => {
 client.on('message',async message => {
     const moment = require('moment'); //npm i moment
 const ms = require('ms') //npm i ms
-    var prefix = '!' //Bot Prefix !
+     var prefix = '!'//ot Prefix !
   var time = moment().format('Do MMMM YYYY , hh:mm');
   var room;
   var title;
@@ -63,7 +63,7 @@ hours = 12;
 }
  
   var filter = m => m.author.id === message.author.id;
-  if(message.content.startsWith(prefix + "gstart")) {
+  if(message.content.startsWith(prefix + "start")) {
  
     if(!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(':heavy_multiplication_x:| **يجب أن يكون لديك خاصية التعديل على السيرفر**');
     message.channel.send(`:eight_pointed_black_star:| **Send Name channel For the Giveaway**`).then(msg => {
@@ -138,7 +138,7 @@ hours = 12;
 
 
 client.on('message', message => {
-     if (message.content === (prefix + "كيف")) {
+     if (message.content === (prefix + "how)) {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#8650a7")
@@ -147,7 +147,7 @@ client.on('message', message => {
     }
 });
 client.on("message", message => {
-    if (message.content === (prefix + "كيف")) {
+    if (message.content === (prefix + "how")) {
      const embed = new Discord.RichEmbed() 
          .setColor("#580e6b")
          .setThumbnail(message.author.avatarURL)
@@ -156,7 +156,7 @@ client.on("message", message => {
    **
  
            ***كيفية استخدام البوت***
-           ** اولا عليك كتابة '' ليبدأ البوت معك  **
+           ** اولا عليك كتابة '!start' ليبدأ البوت معك  **
             ** ثانيا عليك اختيار روم القيف اواي بدون اضافة رمز الهاشتاق اكتب اسم الروم الذي تريد ان يكتب **
 			** اذا لم يشتغل معك البوت تأكد من انك تعطي صلاحيات للبوت للتكلم في الروم ** 
 			** ثالثا يجب عليك ان تختار الوقت **
@@ -165,12 +165,9 @@ client.on("message", message => {
 			** d= يوم **
 			** s= ثانية ** 
 			** h= ساعة ** 
-			** وكما هو موضح في الصورة المصغرة ادناه **
+			** وكما هو موضح في الصورة المتحركة
          
-        [!clear]  --> {مسح الشات }
-        [!ban]  --> {حظر عضو من السيرفر }
-        [!kick]  --> {طرد عضو من السيرفر }
-        [!bc]  --> {رساله لجميع اعضاء السيرفر }
+       
 *-*-*-*-*-*-*-*  *-*-*-*-*-*-*-*    *-*-*-*-*-*-*-*  *-*-*-*-*-*-*-*    
           
    لدخول سيرفر الدهم للبوت --> !سيرفر 
