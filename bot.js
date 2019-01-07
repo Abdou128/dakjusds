@@ -14,7 +14,7 @@ client.on('ready', () => {
 
 
 client.on('message' , message => {
-if(message.content === '!help') {
+if(message.content === '!ghelp') {
   var EsTeKnAN = new Discord.RichEmbed()
   .setColor('RANDOM')
 message.author.send(`
