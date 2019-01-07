@@ -129,7 +129,7 @@ hours = 12;
 
 
 client.on('message', message => {
-            if (message.content.startsWith("كيف")) {
+            if (message.content.startsWith("!كيف")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField('     **اكتب الامر !gstart  ** )
