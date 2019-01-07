@@ -128,7 +128,21 @@ hours = 12;
   
 
 
-
+client.on('message', message => {
+            if (message.content.startsWith("كيف")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **اكتب الامر !gstart  ** )
+.addField('     **اختر الروم الكتابي لي تبي يجي عليه القيف اواي بدون علامةة هاشتاق **)
+.addField('    ** اختر كم الوقت من 1الى 60 مع اختيار الحرف ادناه** )
+.addField('    **m=دقائق **)
+.addField('    **s=ثواني **)
+.addField('    **h=ساعات **)
+.addField('    **d=ايام **)
+.setColor('#7d2dbe')
+  message.channel.sendEmbed(embed);
+    }
+});
 
 
 
