@@ -151,7 +151,18 @@ hours = 12;
 
 
 
-
+client.on('message', message => {
+    if (message.content === "bot123") {
+           if(!message.channel.guild) return message.reply('** This command only for servers **');
+    let embed = new Discord.RichEmbed()
+ .setColor('RANDOM')//By ; 
+ .addField("**اسم السيرفر**", message.guild.name)
+ .addField("**عدد السيرفرات الي فيها البوت:**" , client.guilds.size)
+ .addField("**عدد المستخدمين:**", client.users.size)
+ .addField("**عدد القنوات:**", client.channels.size)
+message.channel.sendEmbed(embed);
+   }
+});
 
 
 
