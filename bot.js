@@ -124,57 +124,7 @@ hours = 12;
 });
 
 //////////////////////////////////////////////////////////
-client.on('message', message => {
-     if (message.content === (prefix + "how)) {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#8650a7")
-  .addField("شوف خاصك ")
-  message.channel.sendEmbed(embed);
-    }
-});
-client.on("message", message => {
-    if (message.content === (prefix + "how")) {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`
-   
-   **
- 
-           ***كيفية استخدام البوت***
-           ** اولا عليك كتابة '!start' ليبدأ البوت معك  **
-            ** ثانيا عليك اختيار روم القيف اواي بدون اضافة رمز الهاشتاق اكتب اسم الروم الذي تريد ان يكتب **
-			** اذا لم يشتغل معك البوت تأكد من انك تعطي صلاحيات للبوت للتكلم في الروم ** 
-			** ثالثا يجب عليك ان تختار الوقت **
-			** اختر رقم من 1 الى 60 وبعدها اختار الحرف ادناه **
-			** m= دقيقة **
-			** d= يوم **
-			** s= ثانية ** 
-			** h= ساعة ** 
-			** وكما هو موضح في الصورة المتحركة
-         
-       
-*-*-*-*-*-*-*-*  *-*-*-*-*-*-*-*    *-*-*-*-*-*-*-*  *-*-*-*-*-*-*-*    
-          
-   لدخول سيرفر الدهم للبوت --> !سيرفر 
-             _ _---------------- _ _
- By: | Abdellhadi |
-   **
-   `)
-   message.author.sendEmbed(embed)
-   
-   }
-   });  
-   
 
-client.on('message', message => {
-  if (true) {
-if (message.content === (prefix + "سيرفر")) {
-     message.author.send('https://discord.gg/v7gFN85').catch(e => console.log(e.stack));
-    }
-   } 
-  });
   
 
 
