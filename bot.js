@@ -78,7 +78,7 @@ hours = 12;
             time: 20000,
             errors: ['time']
           }).then(collected => {
-            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('**The Bot Not Support This Time**');
+            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('**البوت لا يدعم هاذا الوقت **');
             duration = collected.first().content
             collected.first().delete();
             msg.edit(':eight_pointed_black_star:| **ارسل اسم الجائزة **').then(msg => {
