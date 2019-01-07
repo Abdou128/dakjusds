@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '!'
+const prefix = "!"
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -33,14 +33,10 @@ client.on('ready', () => {
 
 
 
-
-
-
-
 client.on('message',async message => {
     const moment = require('moment'); //npm i moment
 const ms = require('ms') //npm i ms
-     var prefix = '!'//ot Prefix !
+    var prefix = '!' //Bot Prefix !
   var time = moment().format('Do MMMM YYYY , hh:mm');
   var room;
   var title;
@@ -63,7 +59,7 @@ hours = 12;
 }
  
   var filter = m => m.author.id === message.author.id;
-  if(message.content.startsWith(prefix + "start")) {
+  if(message.content.startsWith(prefix + "gstart")) {
  
     if(!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(':heavy_multiplication_x:| **يجب أن يكون لديك خاصية التعديل على السيرفر**');
     message.channel.send(`:eight_pointed_black_star:| **Send Name channel For the Giveaway**`).then(msg => {
@@ -137,58 +133,8 @@ hours = 12;
 
 
 
-client.on('message', message => {
-     if (message.content === (prefix + "how)) {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#8650a7")
-  .addField("شوف خاصك ")
-  message.channel.sendEmbed(embed);
-    }
-});
-client.on("message", message => {
-    if (message.content === (prefix + "how")) {
-     const embed = new Discord.RichEmbed() 
-         .setColor("#580e6b")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`
-   
-   **
- 
-           ***كيفية استخدام البوت***
-           ** اولا عليك كتابة '!start' ليبدأ البوت معك  **
-            ** ثانيا عليك اختيار روم القيف اواي بدون اضافة رمز الهاشتاق اكتب اسم الروم الذي تريد ان يكتب **
-			** اذا لم يشتغل معك البوت تأكد من انك تعطي صلاحيات للبوت للتكلم في الروم ** 
-			** ثالثا يجب عليك ان تختار الوقت **
-			** اختر رقم من 1 الى 60 وبعدها اختار الحرف ادناه **
-			** m= دقيقة **
-			** d= يوم **
-			** s= ثانية ** 
-			** h= ساعة ** 
-			** وكما هو موضح في الصورة المتحركة
-         
-       
-*-*-*-*-*-*-*-*  *-*-*-*-*-*-*-*    *-*-*-*-*-*-*-*  *-*-*-*-*-*-*-*    
-          
-   لدخول سيرفر الدهم للبوت --> !سيرفر 
-             _ _---------------- _ _
- By: | Abdellhadi |
-   **
-   `)
-   message.author.sendEmbed(embed)
-   
-   }
-   });  
-   
 
-client.on('message', message => {
-  if (true) {
-if (message.content === (prefix + "سيرفر")) {
-     message.author.send('https://discord.gg/v7gFN85').catch(e => console.log(e.stack));
-    }
-   } 
-  });
-  
+
 
 
 
