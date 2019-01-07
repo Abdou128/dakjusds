@@ -37,10 +37,10 @@ client.on('ready', () => {
 
 
 
-cclient.on('message',async message => {
+client.on('message',async message => {
     const moment = require('moment'); //npm i moment
 const ms = require('ms') //npm i ms
-    var prefix = '.' //Bot Prefix !
+    var prefix = '!' //Bot Prefix !
   var time = moment().format('Do MMMM YYYY , hh:mm');
   var room;
   var title;
@@ -63,7 +63,7 @@ hours = 12;
 }
  
   var filter = m => m.author.id === message.author.id;
-  if(message.content.startsWith(prefix + "شغل")) {
+  if(message.content.startsWith(prefix + "gstart")) {
  
     if(!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(':heavy_multiplication_x:| **يجب أن يكون لديك خاصية التعديل على السيرفر**');
     message.channel.send(`:eight_pointed_black_star:| **Send Name channel For the Giveaway**`).then(msg => {
@@ -73,19 +73,19 @@ hours = 12;
         errors: ['time']
       }).then(collected => {
         let room = message.guild.channels.find('name' , collected.first().content);
-        if(!room) return message.channel.send(':heavy_multiplication_x:| **اكتب الروم او اكتب !كيف لمعرفة كيفية استخدام البوت بشكل صحيح :(**');
+        if(!room) return message.channel.send(':heavy_multiplication_x:| **i Found It :(**');
         room = collected.first().content;
         collected.first().delete();
-        msg.edit(':eight_pointed_black_star:| ** اختر وقت المسابقة  **').then(msg => {
+        msg.edit(':eight_pointed_black_star:| **Time For The Giveaway**').then(msg => {
           message.channel.awaitMessages(filter, {
             max: 1,
             time: 20000,
             errors: ['time']
           }).then(collected => {
-            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('**البوت لا يدعم هاذا الوقت اكتب !كيف لمعرفة كيفية استخدام البوت**');
+            if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('**The Bot Not Support This Time**');
             duration = collected.first().content
             collected.first().delete();
-            msg.edit(':eight_pointed_black_star:| **الان ارسل الجائزة **').then(msg => {
+            msg.edit(':eight_pointed_black_star:| **Now send The Present **').then(msg => {
               message.channel.awaitMessages(filter, {
                 max: 1,
                 time: 20000,
@@ -115,7 +115,7 @@ hours = 12;
                 }, ms(duration));
             });
                 } catch(e) {
-                message.channel.send(`:heavy_multiplication_x:| **انا لا املك صلاحيات**`);
+                message.channel.send(`:heavy_multiplication_x:| **i Don't Have Prem**`);
                   console.log(e);
                 }
               });
@@ -174,9 +174,8 @@ client.on("message", message => {
 *-*-*-*-*-*-*-*  *-*-*-*-*-*-*-*    *-*-*-*-*-*-*-*  *-*-*-*-*-*-*-*    
           
    لدخول سيرفر الدهم للبوت --> !سيرفر 
-   !support --> دخول سيرفر الدعم
              _ _---------------- _ _
-  BOT By: | Abdellhadi #6969  |
+ By: | Abdellhadi |
    **
    `)
    message.author.sendEmbed(embed)
