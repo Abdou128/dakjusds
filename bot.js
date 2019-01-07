@@ -62,17 +62,17 @@ hours = 12;
   if(message.content.startsWith(prefix + "gstart")) {
  
     if(!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(':heavy_multiplication_x:| **يجب أن يكون لديك خاصية التعديل على السيرفر**');
-    message.channel.send(`:eight_pointed_black_star:| **Send Name channel For the Giveaway**`).then(msg => {
+    message.channel.send(`:eight_pointed_black_star:| **اكتب اسم الروم الكتابي **`).then(msg => {
       message.channel.awaitMessages(filter, {
         max: 1,
         time: 20000,
         errors: ['time']
       }).then(collected => {
         let room = message.guild.channels.find('name' , collected.first().content);
-        if(!room) return message.channel.send(':heavy_multiplication_x:| **i Found It :(**');
+        if(!room) return message.channel.send(':heavy_multiplication_x:| **اكتب الروم الكتابي بدون علامة هاشتاق :(**');
         room = collected.first().content;
         collected.first().delete();
-        msg.edit(':eight_pointed_black_star:| **Time For The Giveaway**').then(msg => {
+        msg.edit(':eight_pointed_black_star:| **ادخل وقت المسابقة**').then(msg => {
           message.channel.awaitMessages(filter, {
             max: 1,
             time: 20000,
@@ -81,7 +81,7 @@ hours = 12;
             if(!collected.first().content.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('**The Bot Not Support This Time**');
             duration = collected.first().content
             collected.first().delete();
-            msg.edit(':eight_pointed_black_star:| **Now send The Present **').then(msg => {
+            msg.edit(':eight_pointed_black_star:| **ارسل اسم الجائزة **').then(msg => {
               message.channel.awaitMessages(filter, {
                 max: 1,
                 time: 20000,
