@@ -213,7 +213,7 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],``);
+        client.user.setGame(setGame[i],`https://twitch.tv/paaaaaartly`);
     }, ms);100000
 
 });
