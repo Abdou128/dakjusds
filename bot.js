@@ -29,7 +29,7 @@ message.author.send(`
 ** واتبع الخطوات الموجودة في الفيديو التالي **
 https://youtu.be/7ICib2XPTQQ
 [❖─═════ {✯ الدعم الفني  ✯} ═════─❖]
-** رابط سيرفر الدعم الفني https://discord.gg/s7axHDj **
+** رابط سيرفر الدعم الفني https://discord.gg/YdbMBPj **
 ** موقع البوت الرسمي : http://giveaway-bot-ar.ga/  الموقع قيد التعديل 
 [❖─═════ {✯ :tada: البوت مازال تحت التطوير:tada: ✯} ═════─❖]
 
